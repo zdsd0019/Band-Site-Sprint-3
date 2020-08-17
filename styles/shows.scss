@@ -1,0 +1,302 @@
+@import './partials/mixins';
+
+.hero__image {
+    @include mobile-offset;
+    background-image: url("../assets/images/photo-gallery-1.jpg");
+    background-color: $black;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 29.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // opacity: 50%;
+
+        @include tablet {
+            @include tablet-offset;
+            height: 41.875rem;
+            align-items: unset;
+
+        }
+
+        @include laptop {
+            padding-left: 5.625rem;
+            padding-right: 5.625rem;
+            height: 41.875rem;
+
+        }
+
+        @include laptop-l {
+            @include laptop-offset;
+        }
+
+        &__heading {
+            color: white;
+            width: 100%;
+            margin: 0;
+            padding-top: 4rem;
+            padding-bottom: 1rem;
+
+            @include tablet {
+                @include desk-and-tablet-header2-sub-header;
+                padding-top: 6rem;
+            }
+
+            @include laptop {
+                width: 35%;
+            }
+
+            @include laptop-l {
+                width: 29.509%
+            }
+        }
+
+        &__text {
+            @include mobile-header1;
+            color: $white;
+            margin: 0;
+            font-size: 2.2rem;
+            line-height: 2.6rem;
+            padding-bottom: 2rem;
+            max-width: 98%;
+    
+                @include tablet {
+                    @include desk-and-tablet-hero-header1;
+                    font-size: 3.7rem;
+                    line-height: 5rem;
+                    width: 77.224%;
+    
+                }
+                
+                @include laptop {
+                    width: 65.218%;
+                }
+    
+                @include laptop-m {
+                    width: 32.6%;
+                }
+
+                @include laptop-l {
+                    width: 56.558%;
+                }
+            }
+
+            &__audio {
+                width: 100%;
+                
+                @include tablet {
+                    width: 62%;
+                }
+
+                @include laptop {
+                    height: 30%;
+                }
+
+                @include laptop-l {
+                    height: 64.095%;
+                    width: 40.371%;
+                    padding-left: 5rem;
+                    align-self: flex-end;
+                }
+            }
+            
+            &__laptop {
+                @include laptop-l {
+                    display: flex;
+                    height: 34%;
+                }
+            }
+}
+
+.shows{
+    color: white;
+    &__container {
+        @include mobile-offset;
+            color: $black;
+            margin: 0;
+            padding-bottom: 2rem;
+
+        @include tablet {
+           @include tablet-offset;
+           padding-bottom: 2rem;
+       }
+
+        @include laptop {
+            padding-left: 5.625rem;
+            padding-right: 5.625rem;
+       }
+
+       @include laptop-l {
+           @include laptop-offset;
+       }
+    }
+
+    &__heading {
+        display: none;
+
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+            width: 78%;
+        }
+
+        @include laptop-l {
+            width: 63.8%;
+            align-items: flex-end;
+        }
+
+        &-one{
+            @include desk-and-tablet-header2-sub-header;
+            font-size: 1rem;
+            width: 22.5%;
+            color: $mercury-1;
+
+            @include laptop-l {
+                width: 19.3%;
+            }
+        }
+
+        &-two {
+            @include desk-and-tablet-header2-sub-header;
+            font-size: 1rem;
+            color: $mercury-1;
+        }
+
+        &-three {
+            @include desk-and-tablet-header2-sub-header;
+            font-size: 1rem;
+            width: 28%;
+            color: $mercury-1;
+
+            @include laptop {
+                width: 25.7%;
+            }
+
+            @include laptop-l {
+                width: 43.6%;
+            }
+        }
+    }
+}
+
+.info {
+    border-bottom: 0.2rem solid $mercury-1;
+
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 1rem;
+    }
+
+    @include laptop-l {
+        width: 63.81%;
+        margin-left: 36.23%;
+        align-items: center;
+    }
+
+    &__time {
+        @include mobile-header2-sub-header;
+        margin: 0;
+        color: $silver;
+        padding-bottom: 1rem;
+        padding-top: 1.5rem;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__date {
+        @include mobile-header4-paragraph;
+        font-family: Avenir-Bold;
+        margin: 0;
+        padding-bottom: 1.5rem;
+
+        @include tablet {
+            width: 25%;
+        }
+    }
+
+    &__task {
+        @include mobile-header2-sub-header;
+        margin: 0;
+        color: $silver;
+        padding-bottom: 1rem;
+
+        @include tablet {
+            display: none;
+        }      
+    }
+
+    &__venue {
+        @include mobile-header4-paragraph;
+        margin: 0;
+        padding-bottom: 1.5rem;
+
+        @include tablet {
+            width: 14%;
+        }
+    }
+
+    &__where {
+        @include mobile-header2-sub-header;
+        margin: 0;
+        color: $silver;
+        padding-bottom: 1rem;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__location {
+        @include mobile-header4-paragraph;
+        margin: 0;
+        padding-bottom: 1.5rem;
+
+        &-last{
+            padding-bottom: 2rem;
+        }
+    }
+
+
+}
+
+.main {
+
+    &__heading {
+        @include mobile-header1;
+        margin: 0;
+        padding-top: 2rem;
+        padding-bottom: 2.5rem;
+
+        @include tablet {
+            @include desk-and-tablet-header1;
+        }
+    }
+}
+
+.button__buy {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    height: 2.5rem;
+    border-radius: 4px;
+    color: $white;
+    background-color: $light-black;
+
+    @include tablet {
+        width: 23.057%;
+    }
+
+    &:hover {
+        background-color: $black;
+    }
+}
+
+.heading__wrap {
+    @include laptop-l {
+        display: flex;
+        justify-content: space-between;
+    }
+}
