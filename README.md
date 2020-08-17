@@ -43,7 +43,12 @@ https://project-1-api.herokuapp.com/
 
 Diving Deeper challenges should only be attempted if all project requirements are met and adding Diving Deeper challenges must not conflict with the existing requirements. The following are suggestions that you can try to take your understanding deeper and go above and beyond..
 
+# Dynamic Timestamp
+
+* To add a more realistic feel to the site, try updating the timestamp in the comments section to reflect when it was posted in a more human-readable format. Using YouTube as an example, a recently posted comment might display the time posted as "10 minutes ago" or "3 days ago". Apply this type of timestamp to your data without hardcoding the actual message.
+
 # Comment Delete Functionality
+
 * The provided API has a DELETE endpoint that you can use to delete comments. Try adding adding a delete button to each comment. When clicked, this button triggers a function that deletes the comment both from the API and also from the DOM. Information about the comment delete endpoint can be found in the API documentation.
 
-######  Note: While understanding and applying the functionality for deleting comments is important, maintaining the visual integrity of the page is also important. Add the delete bu
+######  Note: While understanding and applying the functionality for deleting comments is important, maintaining the visual integrity of the page is also important. Add the delete button in a way that does not interfere with the layout of the site and matches the overall aesthetic of the page.
